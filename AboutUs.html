@@ -1,0 +1,66 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<link rel="stylesheet" type="text/css" href="css/main.css" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+
+</head>
+
+<body>
+
+<div id="container">
+	<!--Remove everything below in this container and transplant to target site-->
+	<div id="aboutUsBox">
+    	<div class="aboutUs" id="leftAboutUs">
+        	<img src="images/fred2.jpg" id="fred">
+        </div>
+        <div class="aboutUs" id="rightAboutUs">
+        	<h1 id="ourHistory">Our History</h1>
+              <p>In 1939, Fred Lawshe formed the Dakota County Historical Society to preserve, interpret and promote the history of Dakota County. To accomplish this mission, Fred teamed with other individuals and groups to begin the process of collecting, interpreting and publishing the history of the County. Fred and the other members accumulated over 3,000 primary source materials between 1939 and 1971.</p>
+              
+              <p>The first meeting of the 'historically minded' Dakota County Historical and Archaeological Society was held in the South St. Paul Public Library in April 1939. The original purpose of the Society was to "establish a link with the past by preserving the relics, written records, and other material of those historic days of long ago for future generations."</p>
+              
+              <h2 id="fredHead">Fred E. Lawshe</h2>
+              
+              <p>Fred Lawshe was the first president of the Society and he lobbied long and hard to secure space for a museum. He was the director and curator of the museum until his death in 1971. What began as a hobby led to a full-time passion, especially after he retired in 1958 from his 40 year job as the South St. Paul High School industrial arts teacher. Fred Lawshe logged thousands of hours creating exhibits, giving tours to student groups, and organizing collections.</p>
+              
+              <H2>The First Museum</H2>
+              
+              <p>It wasn't until 1955 that DCHS opened its first museum. The Society first looked to open a museum in Hastings, the county seat, but couldn't secure a location. Attempts to place a museum in the Faribault House in Mendota also failed. When South St. Paul decided to build a new municipal building, the Society asked the city if it could open a museum in the new building's basement. The city agreed. The Society looked for a temporary home for its new museum. Space was found in Room 308 in the South St. Paul High School. While DCHS did own some artifacts, many of the original exhibits were built around artifacts borrowed from the Minnesota Historical Society.</p>
+              
+              <p>One of the advantages of being located in a high school was that student members of Scribes, a junior historian group, often served as museum attendants. The growth of the student population led to the closing of the museum in the school only a year after it had opened. On April 16, 1957, DCHS officially opened its history museum in one room of the South St. Paul municipal building basement. But the one room was quickly filled with new donations and exhibits. By 1961, the museum had over 5,000 items. Repeated requests for additional space resulted in an expansion to another room, then another, then across the hall until finally, the museum filled the entire basement of the South St. Paul city building.</p>
+              
+              <h2>A New Building</h2>
+              
+              <p>In 1976, the Dakota County government was looking for a bicentennial project, and the Dakota County Historical Society board members had just the project – a new museum building. The museum was bursting at the seams in the basement of the city building. County commissioners finally agreed to make a permanent history museum building their legacy, but a debate did ensue about the building's architectural design and its location. One was finally agreed upon, and on December 30, 1976, one day before the bicentennial year ended, county commissioners and DCHS board members broke the ground for the museum.</p>
+              
+              <p>Although Fred Lawshe never got to witness his dream – a museum building – the museum was dedicated to him. The storage area still holds numerous original paintings and prints which Fred had created for his exhibits. And his distinctive object labels still provide extra information on quite a few "mystery objects".</p>
+              
+              <h2>Today's Museum</h2>
+              
+              <b>DCHS Museum</b>
+              
+              <p>The Dakota County Historical Society continues to build upon the efforts of Fred E. Lawshe and others who have worked for the Society over the years. There are now over 25,000 objects in the museum's collections and more than 20,000 photographs. Its publishing program, first begun in 1951 with a newsletter called Over the Years, now creates over 100 pages of original historical research a year. Its research library has one of the best collections of local history in the State.</p>
+              
+              <p class="excerpt">Excerpts contained on these DCHS History pages from "The Good the Bad and the Tuna: A Sampling of Artifacts Collected by the Dakota County Historical Society Since 1939″, © 1999 Dakota County Historical Society.</p>
+              <h2>More about us</h2>
+              <div>
+              	<a href="staff.html" class="aboutUsLinks">Our Staff</a>
+                <a href="trustees.html" class="aboutUsLinks">Our Trustees</a>
+              </div>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+
+	//All this does is hide the whitespace above "Our History"
+	//We can use similar logic in the JavaScript to adjust the image per header
+	var aboutBox = document.getElementById('rightAboutUs');
+	var ourHistory = document.getElementById('ourHistory');
+	aboutBox.scrollTop = ourHistory.offsetTop - 20;
+</script>
+
+</body>
+</html>

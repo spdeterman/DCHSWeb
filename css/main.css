@@ -1,0 +1,82 @@
+@charset "utf-8";
+/* CSS Document */
+
+body{
+	background-color: #ffdbb8;	
+}
+
+img{
+	height: 525px;
+}
+
+h1, h2{
+	text-align: center;
+	background-color: #330000;
+	color: #fff;
+}
+
+h1{
+	padding: 0px;
+	marigin: 0px;	
+}
+
+h2{
+	font-size: 20pt;	
+}
+
+a:link{
+	color: 990000;
+	font-size: 18pt;
+	font-style: oblique;
+	text-decoration: none;
+}
+
+a:visited{
+	color: ff00ff;	
+}
+
+a:hover{
+	color: #990000;	
+}
+
+.aboutUs{
+	display: inline;
+	border: 2px solid black;
+	border-radius: 2px;	
+	float: left;
+	padding: 0px;
+	margin: 15px;
+}
+
+#leftAboutUs{
+	float: left;
+	width: auto;
+		
+}
+
+#rightAboutUs{
+	float: left;
+	width: 500px;
+	height: 97%;
+	overflow-y: scroll;
+	background-color: white;
+}
+
+#container {
+	height: 540px;
+	width: 981px;
+	display: block;
+	 
+}
+
+#aboutUsBox{
+	width: 100%;
+	display: inline;	
+}
+
+.aboutUsLinks{
+	display: inline;	
+	margin: 15px;
+	text-align: center;
+}
+

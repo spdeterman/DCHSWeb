@@ -1,0 +1,93 @@
+/*style sheet for staff*/
+
+body{
+	background-color: #ffdbb8;	
+}
+
+img{
+	height: 500px;
+}
+
+img#trustees, img#staff{
+    width: 407px;
+}
+
+
+
+h1, h2{
+	text-align: center;
+	background-color: #330000;
+	color: #fff;
+}
+
+h1{
+	padding: 0px;
+	margin: 0px;
+}
+
+h2{
+	font-size: 20pt;	
+}
+
+a:link{
+	color: #990000;
+	font-size: 18pt;
+	font-style: oblique;
+	text-decoration: none;
+}
+
+a:visited{
+	color: #ff00ff;
+}
+
+a:hover{
+	color: #990000;	
+}
+
+table.ourTables{
+     width: 100%;
+}
+.aboutUs{
+	display: inline;
+	border: 2px solid black;
+	border-radius: 2px;	
+	float: left;
+	padding: 0px;
+	margin: 15px;
+}
+#fullAboutUs{
+    width: 100%;
+}
+
+#leftAboutUs{
+	float: left;
+	width: auto;
+		
+}
+
+#rightAboutUs{
+	float: left;
+	width: 400px;
+	height: 97%;
+	overflow-y: scroll;
+	background-color: white;
+}
+
+#container {
+	height: 540px;
+	width: 981px;
+	display: block;
+	 
+}
+
+#aboutUsBox{
+	width: 100%;
+	display: inline;	
+}
+
+.aboutUsLinks{
+	display: inline;	
+	margin: 15px;
+	text-align: center;
+}
+
