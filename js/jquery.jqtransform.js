@@ -13,7 +13,8 @@
  * Correct bug in ff if click on select (overflow=hidden)
  * No need any more preloading !!
  * 
- ******************************************** */
+ ******************************************** *//*
+
  
 (function($){
 	var defaultOptions = {preloadImg:true};
@@ -29,9 +30,11 @@
 	};
 
 	
-	/***************************
+	*/
+/***************************
 	  Labels
-	***************************/
+	***************************//*
+
 	var jqTransformGetLabel = function(objfield){
 		var selfForm = $(objfield.get(0).form);
 		var oLabel = objfield.next();
@@ -48,7 +51,9 @@
 		return false;
 	};
 	
-	/* Hide all open selects */
+	*/
+/* Hide all open selects *//*
+
 	var jqTransformHideSelect = function(oTarget){
 		var ulVisible = $('.jqTransformSelectWrapper ul:visible');
 		ulVisible.each(function(){
@@ -57,17 +62,23 @@
 			if( !(oTarget && oSelect.oLabel && oSelect.oLabel.get(0) == oTarget.get(0)) ){$(this).hide();}
 		});
 	};
-	/* Check for an external click */
+	*/
+/* Check for an external click *//*
+
 	var jqTransformCheckExternalClick = function(event) {
 		if ($(event.target).parents('.jqTransformSelectWrapper').length === 0) { jqTransformHideSelect($(event.target)); }
 	};
 
-	/* Apply document listener */
+	*/
+/* Apply document listener *//*
+
 	var jqTransformAddDocumentListener = function (){
 		$(document).mousedown(jqTransformCheckExternalClick);
 	};	
 			
-	/* Add a new handler for the reset action */
+	*/
+/* Add a new handler for the reset action *//*
+
 	var jqTransformReset = function(f){
 		var sel;
 		$('.jqTransformSelectWrapper select', f).each(function(){sel = (this.selectedIndex<0) ? 0 : this.selectedIndex; $('ul', $(this).parent()).each(function(){$('a:eq('+ sel +')', this).click();});});
@@ -75,9 +86,11 @@
 		$('input:checkbox, input:radio', f).each(function(){if(this.checked){$('a', $(this).parent()).addClass('jqTransformChecked');}});
 	};
 
-	/***************************
+	*/
+/***************************
 	  Buttons
-	 ***************************/
+	 ***************************//*
+
 	$.fn.jqTransInputButton = function(){
 		return this.each(function(){
 			var newBtn = $('<button id="'+ this.id +'" name="'+ this.name +'" type="'+ this.type +'" class="'+ this.className +' jqTransformButton"><span><span>'+ $(this).attr('value') +'</span></span>')
@@ -89,9 +102,11 @@
 		});
 	};
 	
-	/***************************
+	*/
+/***************************
 	  Text Fields 
-	 ***************************/
+	 ***************************//*
+
 	$.fn.jqTransInputText = function(){
 		return this.each(function(){
 			var $input = $(this);
@@ -117,7 +132,9 @@
 				.hover(function(){$wrapper.addClass("jqTransformInputWrapper_hover");},function(){$wrapper.removeClass("jqTransformInputWrapper_hover");})
 			;
 	
-			/* If this is safari we need to add an extra class */
+			*/
+/* If this is safari we need to add an extra class *//*
+
 			$.browser.safari && $wrapper.addClass('jqTransformSafari');
 			$.browser.safari && $input.css('width',$wrapper.width()+16);
 			this.wrapper = $wrapper;
@@ -125,9 +142,11 @@
 		});
 	};
 	
-	/***************************
+	*/
+/***************************
 	  Check Boxes 
-	 ***************************/	
+	 ***************************//*
+
 	$.fn.jqTransCheckBox = function(){
 		return this.each(function(){
 			if($(this).hasClass('jqTransformHidden')) {return;}
@@ -160,9 +179,11 @@
 			this.checked && aLink.addClass('jqTransformChecked');		
 		});
 	};
-	/***************************
+	*/
+/***************************
 	  Radio Buttons 
-	 ***************************/	
+	 ***************************//*
+
 	$.fn.jqTransRadio = function(){
 		return this.each(function(){
 			if($(this).hasClass('jqTransformHidden')) {return;}
@@ -197,9 +218,11 @@
 		});
 	};
 	
-	/***************************
+	*/
+/***************************
 	  TextArea 
-	 ***************************/	
+	 ***************************//*
+
 	$.fn.jqTransTextarea = function(){
 		return this.each(function(){
 			var textarea = $(this);
@@ -241,9 +264,11 @@
 		});
 	};
 	
-	/***************************
+	*/
+/***************************
 	  Select 
-	 ***************************/	
+	 ***************************//*
+
 	$.fn.jqTransSelect = function(){
 		return this.each(function(index){
 			var $select = $(this);
@@ -252,7 +277,9 @@
 			if($select.attr('multiple')) {return;}
 
 			var oLabel  =  jqTransformGetLabel($select);
-			/* First thing we do is Wrap it */
+			*/
+/* First thing we do is Wrap it *//*
+
 			var $wrapper = $select
 				.addClass('jqTransformHidden')
 				.wrap('<div class="jqTransformSelectWrapper"></div>')
@@ -260,33 +287,45 @@
 				.css({zIndex: 10-index})
 			;
 			
-			/* Now add the html for the select */
+			*/
+/* Now add the html for the select *//*
+
 			$wrapper.prepend('<div><span></span><a href="#" class="jqTransformSelectOpen"></a></div><ul></ul>');
 			var $ul = $('ul', $wrapper).css('width',$select.width()).hide();
-			/* Now we add the options */
+			*/
+/* Now we add the options *//*
+
 			$('option', this).each(function(i){
 				var oLi = $('<li><a href="#" index="'+ i +'">'+ $(this).html() +'</a></li>');
 				$ul.append(oLi);
 			});
 			
-			/* Add click handler to the a */
+			*/
+/* Add click handler to the a *//*
+
 			$ul.find('a').click(function(){
 					$('a.selected', $wrapper).removeClass('selected');
 					$(this).addClass('selected');	
-					/* Fire the onchange event */
+					*/
+/* Fire the onchange event *//*
+
 					if ($select[0].selectedIndex != $(this).attr('index') && $select[0].onchange) { $select[0].selectedIndex = $(this).attr('index'); $select[0].onchange(); }
 					$select[0].selectedIndex = $(this).attr('index');
 					$('span:eq(0)', $wrapper).html($(this).html());
 					$ul.hide();
 					return false;
 			});
-			/* Set the default */
+			*/
+/* Set the default *//*
+
 			$('a:eq('+ this.selectedIndex +')', $ul).click();
 			$('span:first', $wrapper).click(function(){$("a.jqTransformSelectOpen",$wrapper).trigger('click');});
 			oLabel && oLabel.click(function(){$("a.jqTransformSelectOpen",$wrapper).trigger('click');});
 			this.oLabel = oLabel;
 			
-			/* Apply the click handler to the Open */
+			*/
+/* Apply the click handler to the Open *//*
+
 			var oLinkOpen = $('a.jqTransformSelectOpen', $wrapper)
 				.click(function(){
 					//Check if box is already open to still allow toggle, but close all other selects
@@ -321,7 +360,9 @@
 	$.fn.jqTransform = function(options){
 		var opt = $.extend({},defaultOptions,options);
 		
-		/* each form */
+		*/
+/* each form *//*
+
 		 return this.each(function(){
 			var selfForm = $(this);
 			if(selfForm.hasClass('jqtransformdone')) {return;}
@@ -336,32 +377,13 @@
 			if( $('select', this).jqTransSelect().length > 0 ){jqTransformAddDocumentListener();}
 			selfForm.bind('reset',function(){var action = function(){jqTransformReset(this);}; window.setTimeout(action, 10);});
 			
-			//preloading dont needed anymore since normal, focus and hover image are the same one
-			/*if(opt.preloadImg && !jqTransformImgPreloaded){
-				jqTransformImgPreloaded = true;
-				var oInputText = $('input:text:first', selfForm);
-				if(oInputText.length > 0){
-					//pour ie on eleve les ""
-					var strWrapperImgUrl = oInputText.get(0).wrapper.css('background-image');
-					jqTransformPreloadHoverFocusImg(strWrapperImgUrl);					
-					var strInnerImgUrl = $('div.jqTransformInputInner',$(oInputText.get(0).wrapper)).css('background-image');
-					jqTransformPreloadHoverFocusImg(strInnerImgUrl);
-				}
+		}); */
+/* End Form each *//*
+
 				
-				var oTextarea = $('textarea',selfForm);
-				if(oTextarea.length > 0){
-					var oTable = oTextarea.get(0).oTable;
-					$('td',oTable).each(function(){
-						var strImgBack = $(this).css('background-image');
-						jqTransformPreloadHoverFocusImg(strImgBack);
-					});
-				}
-			}*/
-			
-			
-		}); /* End Form each */
-				
-	};/* End the Plugin */
+	};*/
+/* End the Plugin *//*
+
 
 })(jQuery);
-				   
+				   */
