@@ -3,7 +3,8 @@ header, footer, section
 	background:#FFDBB8;
 	display:block;
 }
-article, aside, audio, canvas, command, datalist, details, embed, figcaption, figure, hgroup, keygen, meter, nav, output, progress, source, video {
+article, aside, audio, canvas, datalist, details, embed, figcaption, figure, keygen, meter, nav, output, progress,
+source, video {
 	display:block;
 }
 mark, rp, rt, ruby, summary, time {
@@ -229,7 +230,7 @@ p {
 	padding-bottom:10px;
 }
 #slogan {
-	background:url(../images/slogan-bg.jpg) no-repeat left top;
+	/*background:url(../images/slogan-bg.jpg) no-repeat left top;*/
 	width:980px;
 	height:220px;
 	margin:12px 0 0 0;
@@ -237,7 +238,6 @@ p {
 	left:3px;
 	color:#98002E;
 	text-shadow:1px 1px #98002E;
-	position:relative;
 }
 #slogan h2 {
 	font-size:26px;
@@ -713,7 +713,7 @@ aside .line-ver4 {
 	width:990px;
 	height:350px;
 	margin:0px 0;
-	background:url(../images/DHCS Logo.jpg) no-repeat 25px 5px;
+	background:url(../images/DHCS_Logo.jpg) no-repeat 25px 5px;
 }
 #faded ul {
 	list-style:none;
@@ -812,7 +812,7 @@ span.jqTransformCheckboxWrapper {
 	float:left;
 }
 a.jqTransformCheckbox {
-	background:transparent url(../images/checkbox.gif) no-repeat left -30px;
+	/*background:transparent url(../images/checkbox.gif) no-repeat left -30px;*/
 	vertical-align:middle;
 	height:17px;
 	width:17px;

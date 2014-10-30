@@ -25,14 +25,14 @@ h2{
 }
 
 a:link{
-	color: 990000;
+	color: #990000;
 	font-size: 18pt;
 	font-style: oblique;
 	text-decoration: none;
 }
 
 a:visited{
-	color: ff00ff;	
+	color: #ff00ff;
 }
 
 a:hover{

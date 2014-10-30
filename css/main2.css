@@ -1,0 +1,103 @@
+
+div.aboutUs h1, h2{
+    text-align: center;
+    background-color: #330000;
+    color: #fff;
+}
+
+div.aboutUs h1{
+    padding: 0px;
+    marigin: 0px;
+}
+
+div.aboutUs h2{
+    font-size: 20pt;
+}
+
+div.aboutUs p, b{
+    color: #000;
+}
+
+div.aboutUs a:link{
+    color: 990000;
+    font-size: 18pt;
+    font-style: oblique;
+    text-decoration: none;
+}
+
+div.aboutUs a:visited{
+    color: ff00ff;
+}
+
+div.aboutUs a:hover{
+    color: #990000;
+}
+
+
+table.ourTables{
+    width: 700px;
+}
+
+table.ourTables td{
+    padding-bottom: 8px;
+}
+.aboutUs{
+    display: inline;
+    border: 2px solid black;
+    border-radius: 2px;
+    float: left;
+    padding: 0px;
+    margin: 15px;
+}
+#fullAboutUs{
+    width: 100%;
+}
+
+#leftAboutUs{
+    float: left;
+    width: auto;
+
+}
+
+#rightAboutUs{
+    float: right;
+    width: 700px;
+    height: 300px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    background-color: white;
+}
+
+#container {
+    height: 340px;
+    width: 1000px;
+    display: block;
+
+}
+
+#aboutUsBox{
+    width: 100%;
+    display: inline;
+}
+
+.aboutUsLinks{
+    display: inline;
+    margin: 15px;
+    text-align: center;
+}
+
+#fred{
+    height: 300px;
+}
+
+#trustees{
+    height: 300px;
+    width: 220px;
+}
+
+#staff{
+    width:220px;
+    height: 300px;
+}
+
+

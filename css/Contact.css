@@ -1,0 +1,56 @@
+/* <!-- Timothy Bishop
+WebClient Chapter 2 Assignment 
+	including Form.html and form.js --> */
+
+form {
+	margin: 0 auto;
+	width: 800px;
+	padding: 1px;
+	border: 1px solid #CCC;
+	border-radius: 10px;
+	background-color:#ffff00; /* yellow */
+	}
+
+body {
+	background-color:#00ff00;/*  lime */
+}
+
+form div + div {
+	margin-top: 1px;
+}
+
+label {
+	display: inline-block;
+	width: 120px;
+	text-align: right;
+	background-color:#ff00ff; /* fuchsia */
+	font: 24px Arial;
+}
+
+input, textarea {
+	font: 16px Arial;
+	width: 500px;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	border: 1px solid #999;
+	background-color:#ffebcd; /*blanchedalmond */
+}
+
+input:focus, textarea:focus {
+	border-color: #000;
+}
+
+textarea {
+	vertical-align: top;
+	height: 36px;
+	resize: vertical;
+}
+
+.button {
+	padding-left: 93px;
+}
+
+button {
+	margin-left: 10px;
+	background-color:#7fff00; /* chartreuse */
+}
