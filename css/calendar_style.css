@@ -1,6 +1,6 @@
 
 #calendar {
-    width: 70%;
+    width: 95%;
     margin: 40px 40px 0px 40px; /* Should allow us to nest the calendar inside of a container and give it some padding around the edges */
 }
 
@@ -14,7 +14,7 @@ th {text-align: center;}
 /* Force cell width and add padding */
 th, td {
     padding: 10px;
-    width: 10%; /* 1/7th the width of the entire table */
+    width: 13.5%; /* 1/7th the width of the entire table */
 }
 
 /* Force all day cells to be a certain height and align text to the top */
@@ -25,7 +25,7 @@ td {
 
 /* Table border */
 table, td, th {
-    border: 2px inset #98002E;
+    border: 2px inset #A91414;
     font-family: Helvetica;
 }
 
@@ -40,8 +40,8 @@ table, td, th {
 }
 
 .nav {
-    background-color: #98002E;
+    background-color: #A91414;
     height: 10px;
     padding: 2px;
-		text-align: center;
+	text-align: center;
 }

@@ -117,7 +117,7 @@ function fillCalendarData() {
 	});
 	
 	// Get the date object back to the current month since it bleeds into the next month when printing
-	decreaseMonth();
+	//decreaseMonth();
 	
 }
 
