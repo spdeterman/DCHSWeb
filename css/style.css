@@ -312,6 +312,20 @@ h5 {
 	line-height:1.667em;
 	margin-bottom:10px;
 }
+h6 {
+	color:#000000;
+	font-size:30px;
+	line-height:1.2em;
+	margin-bottom:15px;
+	letter-spacing:-1px;
+}
+h7 {
+	font-size:20px;
+	line-height:1.2em;
+	color:#000000;
+	margin-bottom:27px;
+	letter-spacing:-1px;
+}
 /* Bottom button links before footer */
 .link1 {
 	display:inline-block;

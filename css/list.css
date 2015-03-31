@@ -1,0 +1,29 @@
+
+/* Header info should all be centered */
+th {
+	text-align: center;
+	font-size: 30px;
+}
+
+/* Force cell width and add padding */
+th, td {
+    padding: 10px;
+    width: 13.5%; /* 1/7th the width of the entire table */
+}
+
+/* Force all day cells to be a certain height and align text to the top */
+td {
+    height: 30px;
+    vertical-align: top;
+	font-size: 15px;
+}
+
+/* Table border */
+table, td, th {
+    border: 2px inset #A91414;
+    font-family: Helvetica;
+}
+
+a {
+	color: #000000
+}
