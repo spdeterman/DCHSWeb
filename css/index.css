@@ -16,8 +16,4 @@ th, tr, tt, u, ul, var {
 ol, ul {
     list-style:none;
 }
-table, table td {
-    padding:0;
-    border:none;
-    border-collapse:collapse;
-}
+

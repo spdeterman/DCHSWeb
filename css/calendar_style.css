@@ -30,12 +30,12 @@ table, td, th {
 }
 
 /* This class is added to the calendar cells when the mouse hovers over them to give them a highlight */
-.day-highlight {
+.day:hover {
     background-color: #F2DCAE;
 }
 
 /* Highlight for today's cell */
-#today {
+.today {
 	background-color: #CCCCCC;
 }
 

@@ -1,11 +1,54 @@
-<!DOCTYPE html>
+<!--
+
+Web Client Programming
+Event Calendar
+Created by Jeffrey Machacek, William Winfrey, and Tyler Wiliams
+
+-->
+
 <html>
-<head lang="en">
-    <meta charset="UTF-8">
-    <title></title>
+
+<head>
+	<meta charset="UTF-8">
+	<title>Event Calendar</title>
+	<link rel="stylesheet" href="css/index.css" type="text/css" media="all">
+	<link rel="stylesheet" href="css/layout.css" type="text/css" media="all">
+	<link rel="stylesheet" href="css/style.css" type="text/css" media="all">
+	<link rel="stylesheet" href="css/form.css" type="text/css" media="all">
+	<link rel="stylesheet" href="css/list.css" type="text/css">
+	<link rel="stylesheet" href="css/calendar_style.css" type="text/css">
+	<script language="javascript" src="test.js"></script>
+	<script language="javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+	<script>	
+		$("document").ready(function() {
+			var calDate = getCurrentDate();
+					
+			$("#previous-month").click(function() {
+				calDate = decreaseMonth();
+				setMonthHeader();
+				printCal(calDate);
+			});
+					
+			$("#next-month").click(function() {
+				calDate = increaseMonth();
+				setMonthHeader();
+				printCal(calDate);
+			});
+					
+			$("#jump").click(function() {
+				calDate = jumpToDate();
+				printCal(calDate);
+			});
+					
+			printCal(calDate);
+		});
+
+	</script>
+	
 </head>
 <body>
-<header>
+<div class="tail-top">
+  <header>
         <div class="container">
             <div class="header-box">
                 <div class="left">
@@ -13,7 +56,7 @@
                         <nav>
                             <ul>
                                 <li>><a href="index.html"><img src="images/DHCS_Logo.jpg"></a></li>
-                                <li><a href="events.html">Events</a></li>
+                                <li><a href="Events.html">Events</a></li>
                                 <li><a href="Under.html">Exhibits</a></li>
                                 <li><a href="Under.html">History</a></li>
                                 <li><a href="Support.html">Support DCHS</a></li>
@@ -25,6 +68,61 @@
             </div>
     </div>
   </header>
+ </div>
+
+<table id="calendar">
+    <thead>
+			<tr>
+				<th colspan="7" id="month-label"></th>
+			</tr>
+			<tr>
+				<th>Sunday</th>
+				<th>Monday</th>
+				<th>Tuesday</th>
+				<th>Wednesday</th>
+				<th>Thursday</th>
+				<th>Friday</th>
+				<th>Saturday</th>
+			</tr>
+		</thead>
+		<tbody id="calbody"></tbody>
+		<tfoot>
+			<tr>
+				<td class="nav">
+					<button id="previous-month" type="button">Previous</button>
+				</td>
+				<td class="nav" colspan="5">
+					<button type="button" id="jump">Jump To</button>
+					<select id="selectMonth">
+						<option value="0">January</option>
+						<option value="1">February</option>
+						<option value="2">March</option>
+						<option value="3">April</option>
+						<option value="4">May</option>
+						<option value="5">June</option>
+						<option value="6">July</option>
+						<option value="7">August</option>
+						<option value="8">September</option>
+						<option value="9">October</option>
+						<option value="10">November</option>
+						<option value="11">December</option>
+					</select>
+					<select id="selectYear">
+						<option value="2015">2015</option>
+						<option value="2016">2016</option>
+						<option value="2017">2017</option>
+						<option value="2018">2018</option>
+						<option value="2019">2019</option>
+						<option value="2020">2020</option>
+					</select>
+        </td>
+        <td class="nav">
+					<button type="button" id="next-month" action="calendar.html">Next</button>
+        </td>
+			</tr>
+		</tfoot>
+	</table>
+</body>
 <aside>
   <div class="container">
     <div class="inside">

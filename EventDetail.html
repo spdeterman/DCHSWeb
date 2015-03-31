@@ -1,11 +1,25 @@
 <!DOCTYPE html>
-<html>
-<head lang="en">
-    <meta charset="UTF-8">
-    <title></title>
+<head>
+    <title>Dakota County Historical Society | Events</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="css/index.css" type="text/css" media="all">
+    <link rel="stylesheet" href="css/layout.css" type="text/css" media="all">
+    <link rel="stylesheet" href="css/style.css" type="text/css" media="all">
+    <link rel="stylesheet" href="css/form.css" type="text/css" media="all">
+	<link rel="stylesheet" href="css/list.css" type="text/css">
+    <script type="text/javascript" src="js/maxheight.js"></script>
+    <script type="text/javascript" src="js/jquery-1.4.2.min.js"></script>
+    <script type="text/javascript" src="js/cufon-yui.js"></script>
+    <script type="text/javascript" src="js/cufon-replace.js"></script>
+    <script type="text/javascript" src="js/Myriad_Pro_300.font.js"></script>
+    <script type="text/javascript" src="js/jquery.faded.js"></script>
+
 </head>
-<body>
-<header>
+
+<body id="page1" onLoad="new ElementMaxHeight();">
+<!-- START PAGE SOURCE -->
+<div class="tail-top">
+    <header>
         <div class="container">
             <div class="header-box">
                 <div class="left">
@@ -25,6 +39,26 @@
             </div>
     </div>
   </header>
+    <div>
+
+    <section id="content">
+            <div class="container">
+<script>
+	var eventid = location.search.split('eventid=')[1]
+	var xmlhttp = new XMLHttpRequest();
+    xmlhttp.onreadystatechange = function() {
+      if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+            document.getElementById("details").innerHTML = xmlhttp.responseText;
+        }
+    }
+	console.log(eventid);
+	xmlhttp.open("GET", "eventdetail.php?q="+eventid, true);
+    xmlhttp.send();
+</script>
+<div id="details"> </div>
+        </section>
+</div>
+    </div>
 <aside>
   <div class="container">
     <div class="inside">
