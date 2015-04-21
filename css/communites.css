@@ -70,3 +70,8 @@
     position: relative;
     z-index: 9;
 }
+#we{
+    overflow: scroll;
+    max-height: 500px;
+
+}

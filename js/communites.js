@@ -11,6 +11,7 @@ $(function() {
 
             $('#v-nav>div.tab-content').hide().eq(items.index($(this))).show('fast');
 
+            window.location.hash = $(this).attr('tab');
         });
     });
 
