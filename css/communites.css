@@ -69,6 +69,8 @@
     min-height: 1130px;
     position: relative;
     z-index: 9;
+
+    height: 300px;
 }
 #we{
     overflow: scroll;
